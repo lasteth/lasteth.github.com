@@ -58,7 +58,7 @@ body {
 .content {
   background-color: #ffffff;
   padding: 20px;
-  margin: 10px -20px; /* negative indent the amount of the padding to maintain the grid system */
+  margin: 5px -20px; /* negative indent the amount of the padding to maintain the grid system */
   -webkit-border-radius: 6px 6px 6px 6px;
   -moz-border-radius: 6px 6px 6px 6px;
   border-radius: 6px 6px 6px 6px;
@@ -72,16 +72,17 @@ body {
 }
 
 .page-header {
-  -webkit-background-clip: border-box;
-  -webkit-background-origin: padding-box;
-  -webkit-background-size: cover;
+  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#3c3c3c), to(#222222));
+  background-image: -webkit-linear-gradient(top, #3c3c3c, 0%, #222222, 100%);
+  background-image: -moz-linear-gradient(top, #3c3c3c 0%, #222222 100%);
   background-image: linear-gradient(to bottom, #3c3c3c 0%, #222222 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
+  -webkit-border-radius: 6px 6px 0px 0px;
+  -moz-border-radius: 6px 6px 0px 0px;
+  border-radius: 6px 6px 0px 0px;
   padding: 10px 20px 10px;
   margin: -20px -20px 20px;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
   font-family: "WenQuanYi Micro Hei","Microsoft YaHei",sans-serif,"Helvetica Neue",Helvetica,"Segoe UI",Ubuntu,"Hiragino Sans GB";
 }
 
@@ -277,4 +278,27 @@ body {
 .btn-default.active {
   background-color: #e6e6e6;
   border-color: #e0e0e0;
+}
+
+/* disqus customization */
+#sidebar img.dsq-widget-avatar {
+  display: none;
+}
+#sidebar a.dsq-widget-user:after {
+  content: ': ';
+}
+#sidebar p.dsq-widget-meta > a:first-child {
+  display: none;
+}
+#sidebar p.dsq-widget-meta {
+  font-size: 0;
+}
+#sidebar p.dsq-widget-meta > a {
+  font-size: 12px;
+}
+#sidebar p.dsq-widget-meta > a:after {
+  content: ' »';
+}
+#sidebar p.dsq-widget-meta > a:before {
+  content: 'posted ';
 }
